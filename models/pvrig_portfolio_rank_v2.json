@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "model_name": "PVRIG-PortfolioRank",
+  "model_version": "2.0.0",
+  "task": "PVRIG/CD112R blocking VHH CDR generation and experimental portfolio prioritization",
+  "random_seed": 20260726,
+  "stage1": {
+    "pool_size": 16000,
+    "exact_alignment_head": 1200,
+    "esm_shortlist_target": 420,
+    "final_count": 50,
+    "esm_model_id": "facebook/esm2_t6_8M_UR50D",
+    "preliminary_weights": {
+      "cdr_prior": 0.42,
+      "interface_composition_prior": 0.36,
+      "sequence_developability": 0.22
+    },
+    "composite_weights": {
+      "esm_target_enrichment_prior": 0.28,
+      "interface_composition_prior": 0.24,
+      "cdr_prior": 0.18,
+      "anarcii_antibody_likeness": 0.12,
+      "sequence_developability": 0.18
+    },
+    "identity_design_ceiling": 0.72,
+    "candidate_pair_ceiling": 0.78,
+    "interface_cutoff_angstrom": 5.0
+  },
+  "stage2": {
+    "parent_ids": {
+      "F1": "20",
+      "F2": "30",
+      "F3": "38",
+      "F4": "39",
+      "F5": "151"
+    },
+    "validation_identity_threshold": 0.75,
+    "calibrated_percentile_weights": {
+      "esm_target_enrichment_prior": 0.24,
+      "interface_composition_prior": 0.18,
+      "cdr_prior": 0.16,
+      "anarcii_antibody_likeness": 0.1,
+      "sequence_developability": 0.14,
+      "positive_reference_novelty_margin": 0.1,
+      "h3_length_preference": 0.08
+    },
+    "weight_sensitivity_draws": 2000,
+    "weight_dirichlet_concentration": 80.0,
+    "top10_stage1_ranks": [1, 2, 3, 6, 8, 10, 11, 14, 26, 29],
+    "top10_framework_quotas": {
+      "F1": 2,
+      "F3": 4,
+      "F4": 2,
+      "F5": 2
+    },
+    "top10_max_h3_over_18": 1
+  },
+  "inputs": {
+    "pdb_8x6b_sha256": "b9a930e44f61ee2ba35b4f8f739bc9431eb1944dad2e2344bd9c9a7ad13bb868",
+    "pdb_9e6y_sha256": "fb05ec77e439b8e1f43bfa12d7eb60f05f2c53e2099f06442f6c9ced32d98316",
+    "organizer_validator_repository": "https://github.com/clickmab-bio/ab-data-validator.git",
+    "organizer_validator_commit": "97df17aa09bc576a861cf0d8242de97af379fd80"
+  },
+  "limitations": [
+    "Scores are computational sequence priors, not Kd, IC50, blocking rates or probabilities of success.",
+    "8X6B and 9E6Y are PVRIG-PVRL2 complexes and do not validate candidate-antibody complex geometry.",
+    "Wet-lab expression, purity, binding and competition assays are required."
+  ]
+}
