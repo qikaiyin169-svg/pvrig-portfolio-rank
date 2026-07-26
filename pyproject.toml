@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pvrig-portfolio-rank"
+version = "2.0.0"
+description = "Reproducible PVRIG/CD112R VHH CDR generation, screening and portfolio ranking"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+authors = [
+  { name = "Yin Qikai" }
+]
+dependencies = [
+  "anarcii==2.0.8",
+  "biopython==1.87",
+  "numpy==2.5.1",
+  "torch==2.13.0",
+  "transformers==4.57.6",
+]
+
+[project.scripts]
+pvrig-design = "pvrig_portfolio_rank.design:main"
+pvrig-finalize = "pvrig_portfolio_rank.finalize:main"
+pvrig-validate = "pvrig_portfolio_rank.validate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
