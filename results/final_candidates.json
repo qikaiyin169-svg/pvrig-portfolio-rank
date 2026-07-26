@@ -1,0 +1,2957 @@
+{
+  "model_name": "PVRIG-PortfolioRank v2.0",
+  "seed": 20260726,
+  "pool_size": 1149,
+  "shortlist_size": 404,
+  "positive_reference_count": 48,
+  "vhh_framework_count": 5,
+  "pdb_interface_residues": "TSLTSNGATVHRGIRWKASFPEGSWTSLTPNGATVLHRGIRWKASFPEGSWE",
+  "esm_model": "facebook/esm2_t6_8M_UR50D",
+  "score_disclaimer": "校准分及权重敏感性区间只用于序列先验排序；不代表Kd、IC50、阻断率、实验成功概率或候选-PVRIG复合物几何可信度。",
+  "design_semantics": "已披露阳性VHH母本框架上的三CDR优化改造",
+  "structure_evidence": {
+    "8X6B": "PVRIG–Nectin-2 complex, X-ray, 2.0 Å",
+    "9E6Y": "CD112 domain 1–CD112R complex, X-ray, 2.2 Å",
+    "scope": "仅用于PVRIG接触壳层与界面组成先验，不是候选抗体复合物结构"
+  },
+  "portfolio_rule": "前10在单体先验基础上施加家族与H3长度配额：F1×2、F3×4、F4×2、F5×2；H3>18 aa不超过1条，以降低共同失效和长环表达风险。",
+  "parents": {
+    "F1": {
+      "id": "20",
+      "name": "SHR-2002 VHH-20",
+      "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+      "antibody_type": "VHH"
+    },
+    "F2": {
+      "id": "30",
+      "name": "SHR-2002 VHH-30",
+      "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCEASGYSYSGDCMGWFRRAPGKERDEGVATIDNAGRIKYADSVKGRFTISHGNGKYILYLQMNSLKPEDTDMYYCAAGWTFGGNCSPADWGQGTQVTVSS",
+      "antibody_type": "VHH"
+    },
+    "F3": {
+      "id": "38",
+      "name": "SHR-2002 VHH-38",
+      "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+      "antibody_type": "VHH"
+    },
+    "F4": {
+      "id": "39",
+      "name": "SHR-2002 VHH-39",
+      "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASRYTSRTDCMGWFRQAPGKEREGVAHIDSDGIPRYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFGDYCAPNDWGQGTQVTVSS",
+      "antibody_type": "VHH"
+    },
+    "F5": {
+      "id": "151",
+      "name": "SHR-2002 VHH-151",
+      "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+      "antibody_type": "VHH"
+    }
+  },
+  "candidates": [
+    {
+      "name": "PVRIG-OPT01-06FC7",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYTFSDDVMAWFRQAPGKQREGVATIRSYSGGDTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAATGRYGSSYPDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYTFSDDV",
+      "cdr2": "IRSYSGGDT",
+      "cdr3": "AATGRYGSSYPDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.0,
+      "interface_score": 100.0,
+      "cdr_prior_score": 90.26371843282914,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.882009506225586,
+      "developability_score": 100.0,
+      "composite_score": 96.83390806914198,
+      "rank": 1,
+      "calibrated_prior_score": 70.23,
+      "weight_sensitivity_score_p10": 66.79,
+      "weight_sensitivity_score_p90": 73.54,
+      "weight_sensitivity_rank_p10": 1,
+      "weight_sensitivity_rank_p90": 3,
+      "old_rank": 1,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        9,
+        13
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 121,
+        "molecular_weight_da": 13085.3,
+        "theoretical_pI": 7.94,
+        "gravy": -0.493
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=13 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT02-C20D2",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGFTFTSDYMAWFRQAPGKQREGVATFRSGSGITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCSDAPSGDRNYYGNVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GFTFTSDY",
+      "cdr2": "FRSGSGIT",
+      "cdr3": "SDAPSGDRNYYGNV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.3862433862433862,
+      "interface_score": 99.04199773154167,
+      "cdr_prior_score": 86.32627203166203,
+      "esm_target_score": 100.0,
+      "anarcii_score": 30.00889015197754,
+      "developability_score": 100.0,
+      "composite_score": 96.36583052805332,
+      "rank": 2,
+      "calibrated_prior_score": 62.39,
+      "weight_sensitivity_score_p10": 57.72,
+      "weight_sensitivity_score_p90": 66.94,
+      "weight_sensitivity_rank_p10": 3,
+      "weight_sensitivity_rank_p90": 13,
+      "old_rank": 2,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 121,
+        "molecular_weight_da": 13159.3,
+        "theoretical_pI": 8.64,
+        "gravy": -0.515
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=14 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT03-B74D0",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASGGTITSEYAMAWFRQAPGKEREAVAGITAEGGTSTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCSRGYARSDWYYGYDDWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "GGTITSEYA",
+      "cdr2": "ITAEGGTS",
+      "cdr3": "SRGYARSDWYYGYDD",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.19259259259259257,
+      "interface_score": 100.0,
+      "cdr_prior_score": 91.98951374838343,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.78175926208496,
+      "developability_score": 95.0,
+      "composite_score": 95.87273647040551,
+      "rank": 3,
+      "calibrated_prior_score": 65.99,
+      "weight_sensitivity_score_p10": 61.93,
+      "weight_sensitivity_score_p90": 69.9,
+      "weight_sensitivity_rank_p10": 2,
+      "weight_sensitivity_rank_p90": 6,
+      "old_rank": 3,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        15
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 123,
+        "molecular_weight_da": 13178.3,
+        "theoretical_pI": 4.99,
+        "gravy": -0.405
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=15 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT04-F6EA7",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGSTFTSNKAMGWFRQAPGKEREGVAHISAISGTDRYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVRRGDRAEYGSGYSYAYDNYWGQGTQVTVSS",
+      "framework": "F4",
+      "cdr1": "GSTFTSNKA",
+      "cdr2": "ISAISGTD",
+      "cdr3": "VRRGDRAEYGSGYSYAYDNY",
+      "max_positive_identity": 0.5555555555555556,
+      "max_selected_identity": 0.4185185185185185,
+      "interface_score": 97.04034461497469,
+      "cdr_prior_score": 89.09147308266341,
+      "esm_target_score": 95.79203972216706,
+      "anarcii_score": 30.06273078918457,
+      "developability_score": 100.0,
+      "composite_score": 95.40462881823896,
+      "rank": 4,
+      "calibrated_prior_score": 56.0,
+      "weight_sensitivity_score_p10": 52.63,
+      "weight_sensitivity_score_p90": 59.42,
+      "weight_sensitivity_rank_p10": 11,
+      "weight_sensitivity_rank_p90": 22,
+      "old_rank": 6,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "39",
+        "name": "SHR-2002 VHH-39",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASRYTSRTDCMGWFRQAPGKEREGVAHIDSDGIPRYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFGDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        20
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 128,
+        "molecular_weight_da": 13854.0,
+        "theoretical_pI": 8.59,
+        "gravy": -0.575
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F4/SHR-2002 VHH-39；H3=20 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT05-30867",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGSFTSSWMAWFRQAPGKQREGVATISIYIDTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARDTPGGTRYYDDYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGSFTSSW",
+      "cdr2": "ISIYIDT",
+      "cdr3": "ARDTPGGTRYYDDY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.36904761904761907,
+      "interface_score": 100.0,
+      "cdr_prior_score": 89.34753215121928,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.761255264282227,
+      "developability_score": 95.0,
+      "composite_score": 95.32113319573911,
+      "rank": 5,
+      "calibrated_prior_score": 60.58,
+      "weight_sensitivity_score_p10": 56.18,
+      "weight_sensitivity_score_p90": 65.08,
+      "weight_sensitivity_rank_p10": 5,
+      "weight_sensitivity_rank_p90": 15,
+      "old_rank": 8,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 120,
+        "molecular_weight_da": 13185.4,
+        "theoretical_pI": 7.94,
+        "gravy": -0.511
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=14 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT06-156AD",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGGTATRSYAMGWFRQAPGKEHEGVAHIDYEGGTKRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCSRGGRSYDYGYYDVWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GGTATRSYA",
+      "cdr2": "IDYEGGTK",
+      "cdr3": "SRGGRSYDYGYYDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.5416666666666666,
+      "interface_score": 98.89434896947705,
+      "cdr_prior_score": 93.54064873170833,
+      "esm_target_score": 87.57878296445318,
+      "anarcii_score": 30.380355834960938,
+      "developability_score": 100.0,
+      "composite_score": 95.09401975442887,
+      "rank": 6,
+      "calibrated_prior_score": 66.71,
+      "weight_sensitivity_score_p10": 63.56,
+      "weight_sensitivity_score_p90": 69.95,
+      "weight_sensitivity_rank_p10": 1,
+      "weight_sensitivity_rank_p90": 6,
+      "old_rank": 10,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13221.3,
+        "theoretical_pI": 7.01,
+        "gravy": -0.602
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=14 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT07-48869",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGWTSSEKAMAWFRQAPGKQREGVATIIPYGGNPYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARDTAYYRGYGGYQYDDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GWTSSEKA",
+      "cdr2": "IIPYGGNP",
+      "cdr3": "ARDTAYYRGYGGYQYDDV",
+      "max_positive_identity": 0.5555555555555556,
+      "max_selected_identity": 0.39035087719298245,
+      "interface_score": 99.72712684726487,
+      "cdr_prior_score": 90.3306678748949,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.502742767333984,
+      "developability_score": 95.0,
+      "composite_score": 94.47381977231984,
+      "rank": 7,
+      "calibrated_prior_score": 58.64,
+      "weight_sensitivity_score_p10": 54.74,
+      "weight_sensitivity_score_p90": 62.71,
+      "weight_sensitivity_rank_p10": 8,
+      "weight_sensitivity_rank_p90": 18,
+      "old_rank": 11,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13712.0,
+        "theoretical_pI": 8.57,
+        "gravy": -0.59
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=18 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT08-FDB7D",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGDTISSTYTMGWFRQAPGKEHEGVAHISIYGSTRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCARTGYDEKRYPYGAYDDVWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GDTISSTYT",
+      "cdr2": "ISIYGST",
+      "cdr3": "ARTGYDEKRYPYGAYDDV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.42328042328042326,
+      "interface_score": 98.75117598286069,
+      "cdr_prior_score": 92.50019652781343,
+      "esm_target_score": 89.29463852841096,
+      "anarcii_score": 29.86758804321289,
+      "developability_score": 100.0,
+      "composite_score": 93.88576787141625,
+      "rank": 8,
+      "calibrated_prior_score": 63.32,
+      "weight_sensitivity_score_p10": 61.64,
+      "weight_sensitivity_score_p90": 65.01,
+      "weight_sensitivity_rank_p10": 4,
+      "weight_sensitivity_rank_p90": 10,
+      "old_rank": 14,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        7,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13621.8,
+        "theoretical_pI": 5.86,
+        "gravy": -0.529
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=18 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT09-231F6",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTFTESSMGWFRQAPGKEREGVAHIIGYGSARYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCARDDYTGSPGYGYYNDVWGQGTQVTVSS",
+      "framework": "F4",
+      "cdr1": "GGTFTESS",
+      "cdr2": "IIGYGSA",
+      "cdr3": "ARDDYTGSPGYGYYNDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.421218487394958,
+      "interface_score": 96.35074074868838,
+      "cdr_prior_score": 94.44944930056694,
+      "esm_target_score": 79.83344539778894,
+      "anarcii_score": 30.146760940551758,
+      "developability_score": 100.0,
+      "composite_score": 92.04680979823053,
+      "rank": 9,
+      "calibrated_prior_score": 54.17,
+      "weight_sensitivity_score_p10": 49.61,
+      "weight_sensitivity_score_p90": 58.79,
+      "weight_sensitivity_rank_p10": 10,
+      "weight_sensitivity_rank_p90": 27,
+      "old_rank": 26,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "39",
+        "name": "SHR-2002 VHH-39",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASRYTSRTDCMGWFRQAPGKEREGVAHIDSDGIPRYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFGDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        17
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 123,
+        "molecular_weight_da": 13194.3,
+        "theoretical_pI": 6.1,
+        "gravy": -0.501
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F4/SHR-2002 VHH-39；H3=17 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT10-1D432",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASGGSITSSAAMAWFRQAPGKEREAVAGISPEFGGKTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAGGDVGTRYSYNYWDDYWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "GGSITSSAA",
+      "cdr2": "ISPEFGGK",
+      "cdr3": "AGGDVGTRYSYNYWDDY",
+      "max_positive_identity": 0.6,
+      "max_selected_identity": 0.4498910675381264,
+      "interface_score": 100.0,
+      "cdr_prior_score": 92.59014711986205,
+      "esm_target_score": 91.11145208148531,
+      "anarcii_score": 29.3394832611084,
+      "developability_score": 95.0,
+      "composite_score": 91.8517144894303,
+      "rank": 10,
+      "calibrated_prior_score": 59.95,
+      "weight_sensitivity_score_p10": 56.0,
+      "weight_sensitivity_score_p90": 63.69,
+      "weight_sensitivity_rank_p10": 6,
+      "weight_sensitivity_rank_p90": 16,
+      "old_rank": 29,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        17
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13257.4,
+        "theoretical_pI": 5.23,
+        "gravy": -0.338
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=17 aa；前10家族-长度配额入选"
+    },
+    {
+      "name": "PVRIG-OPT11-3B012",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTLDESAMAWFRQAPGKQREGVATISPIQGIKYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCATKGSRASAGWDDYYGYGDYDWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTLDESA",
+      "cdr2": "ISPIQGIK",
+      "cdr3": "ATKGSRASAGWDDYYGYGDYD",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.2579365079365079,
+      "interface_score": 99.29370889392357,
+      "cdr_prior_score": 90.37724120658305,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.857194900512695,
+      "developability_score": 95.0,
+      "composite_score": 95.69279824722256,
+      "rank": 11,
+      "calibrated_prior_score": 56.64,
+      "weight_sensitivity_score_p10": 53.12,
+      "weight_sensitivity_score_p90": 60.15,
+      "weight_sensitivity_rank_p10": 11,
+      "weight_sensitivity_rank_p90": 22,
+      "old_rank": 4,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        21
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 128,
+        "molecular_weight_da": 13806.1,
+        "theoretical_pI": 6.4,
+        "gravy": -0.535
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=21 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT12-94E7C",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGTTLSSLTMAWFRQAPGKQREGVATISSDFGNTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCASGKGYGRVRGPFGYNYFDDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GTTLSSLT",
+      "cdr2": "ISSDFGNT",
+      "cdr3": "ASGKGYGRVRGPFGYNYFDDV",
+      "max_positive_identity": 0.5555555555555556,
+      "max_selected_identity": 0.32936507936507936,
+      "interface_score": 99.15230342362962,
+      "cdr_prior_score": 90.03123381817879,
+      "esm_target_score": 97.96924797776967,
+      "anarcii_score": 29.751911163330078,
+      "developability_score": 100.0,
+      "composite_score": 95.53748572978921,
+      "rank": 12,
+      "calibrated_prior_score": 60.35,
+      "weight_sensitivity_score_p10": 57.96,
+      "weight_sensitivity_score_p90": 62.77,
+      "weight_sensitivity_rank_p10": 6,
+      "weight_sensitivity_rank_p90": 14,
+      "old_rank": 5,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        21
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 128,
+        "molecular_weight_da": 13828.2,
+        "theoretical_pI": 8.98,
+        "gravy": -0.437
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=21 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT13-D6239",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGFTFTTYDMAWFRQAPGKQREGVATIGYSGETYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAGDRGTDVYTYDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GFTFTTYD",
+      "cdr2": "IGYSGET",
+      "cdr3": "AGDRGTDVYTYDV",
+      "max_positive_identity": 0.7142857142857143,
+      "max_selected_identity": 0.4047619047619047,
+      "interface_score": 97.29829298309524,
+      "cdr_prior_score": 91.12046978333848,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.80298614501953,
+      "developability_score": 96.0,
+      "composite_score": 95.32662654414642,
+      "rank": 13,
+      "calibrated_prior_score": 54.14,
+      "weight_sensitivity_score_p10": 50.2,
+      "weight_sensitivity_score_p90": 57.96,
+      "weight_sensitivity_rank_p10": 15,
+      "weight_sensitivity_rank_p90": 26,
+      "old_rank": 7,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        13
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 119,
+        "molecular_weight_da": 12992.2,
+        "theoretical_pI": 5.24,
+        "gravy": -0.462
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=13 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT14-E227F",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYTFGSDAMAWFRQAPGKQREGVATIISGGTTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAARPTPVGSSYLSYYFDDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYTFGSDA",
+      "cdr2": "IISGGTT",
+      "cdr3": "AARPTPVGSSYLSYYFDDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4442007797270955,
+      "interface_score": 94.0322938976772,
+      "cdr_prior_score": 95.09533430411236,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.626310348510742,
+      "developability_score": 98.93333333333334,
+      "composite_score": 95.13099546356182,
+      "rank": 14,
+      "calibrated_prior_score": 56.0,
+      "weight_sensitivity_score_p10": 51.22,
+      "weight_sensitivity_score_p90": 60.74,
+      "weight_sensitivity_rank_p10": 8,
+      "weight_sensitivity_rank_p90": 25,
+      "old_rank": 9,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        19
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13456.8,
+        "theoretical_pI": 7.94,
+        "gravy": -0.329
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=19 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT15-9F72D",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYTSGEYSMAWFRQAPGKQREGVATFNNAFETYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARGDVGRRVGVYGRGSGYDNYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYTSGEYS",
+      "cdr2": "FNNAFET",
+      "cdr3": "ARGDVGRRVGVYGRGSGYDNY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.20965608465608465,
+      "interface_score": 100.0,
+      "cdr_prior_score": 89.0241523178973,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.226909637451172,
+      "developability_score": 100.0,
+      "composite_score": 94.18110831930595,
+      "rank": 15,
+      "calibrated_prior_score": 59.88,
+      "weight_sensitivity_score_p10": 55.57,
+      "weight_sensitivity_score_p90": 64.21,
+      "weight_sensitivity_rank_p10": 5,
+      "weight_sensitivity_rank_p90": 18,
+      "old_rank": 12,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        21
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 127,
+        "molecular_weight_da": 13863.1,
+        "theoretical_pI": 8.96,
+        "gravy": -0.593
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=21 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT16-69E19",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYTTSHYSMAWFRQAPGKQREGVATIDWLYGSTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCGGTEDARTRVYYGRYYGGDDNWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYTTSHYS",
+      "cdr2": "IDWLYGST",
+      "cdr3": "GGTEDARTRVYYGRYYGGDDN",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.3452380952380952,
+      "interface_score": 100.0,
+      "cdr_prior_score": 88.55855211464893,
+      "esm_target_score": 100.0,
+      "anarcii_score": 29.42963409423828,
+      "developability_score": 95.0,
+      "composite_score": 93.9491781957145,
+      "rank": 16,
+      "calibrated_prior_score": 50.19,
+      "weight_sensitivity_score_p10": 45.34,
+      "weight_sensitivity_score_p90": 55.2,
+      "weight_sensitivity_rank_p10": 18,
+      "weight_sensitivity_rank_p90": 41,
+      "old_rank": 13,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        21
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 128,
+        "molecular_weight_da": 14138.3,
+        "theoretical_pI": 7.93,
+        "gravy": -0.65
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=21 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT17-ABE38",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPYTFSTYSMAWFRQAPGKQREGVATIIQEGGTKYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCADTVTRGARSGYIRYQYYGNDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "PYTFSTYS",
+      "cdr2": "IIQEGGTK",
+      "cdr3": "ADTVTRGARSGYIRYQYYGNDV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.3977272727272727,
+      "interface_score": 94.61704730919861,
+      "cdr_prior_score": 90.63501844427728,
+      "esm_target_score": 94.4383846739303,
+      "anarcii_score": 29.80594825744629,
+      "developability_score": 100.0,
+      "composite_score": 93.76948012913984,
+      "rank": 17,
+      "calibrated_prior_score": 47.8,
+      "weight_sensitivity_score_p10": 44.91,
+      "weight_sensitivity_score_p90": 50.71,
+      "weight_sensitivity_rank_p10": 26,
+      "weight_sensitivity_rank_p90": 42,
+      "old_rank": 15,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        22
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 129,
+        "molecular_weight_da": 14219.6,
+        "theoretical_pI": 9.15,
+        "gravy": -0.531
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=22 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT18-F96EC",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGGDTRLAMGWFRQAPGKEHEGVAHISYIYGNTRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVRGTSGTPYTSSGYYGDDNVWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GGDTRLA",
+      "cdr2": "ISYIYGNT",
+      "cdr3": "VRGTSGTPYTSSGYYGDDNV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.37103174603174605,
+      "interface_score": 93.52715879405712,
+      "cdr_prior_score": 91.11387256852011,
+      "esm_target_score": 96.60109522825601,
+      "anarcii_score": 29.621837615966797,
+      "developability_score": 100.0,
+      "composite_score": 93.51681782304183,
+      "rank": 18,
+      "calibrated_prior_score": 48.86,
+      "weight_sensitivity_score_p10": 45.48,
+      "weight_sensitivity_score_p90": 52.31,
+      "weight_sensitivity_rank_p10": 22,
+      "weight_sensitivity_rank_p90": 38,
+      "old_rank": 16,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        7,
+        8,
+        20
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 126,
+        "molecular_weight_da": 13513.7,
+        "theoretical_pI": 6.3,
+        "gravy": -0.479
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=20 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT19-2E074",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGFQSSPSMAWFRQAPGKQREGVATIDAGYGTTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARFAARSYFYDYDDWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GFQSSPS",
+      "cdr2": "IDAGYGTT",
+      "cdr3": "ARFAARSYFYDYDD",
+      "max_positive_identity": 0.5555555555555556,
+      "max_selected_identity": 0.39285714285714285,
+      "interface_score": 96.83979374053473,
+      "cdr_prior_score": 91.59318496949645,
+      "esm_target_score": 99.24714109536367,
+      "anarcii_score": 29.196205139160156,
+      "developability_score": 99.1483870967742,
+      "composite_score": 93.40711499840863,
+      "rank": 19,
+      "calibrated_prior_score": 55.7,
+      "weight_sensitivity_score_p10": 52.13,
+      "weight_sensitivity_score_p90": 59.34,
+      "weight_sensitivity_rank_p10": 12,
+      "weight_sensitivity_rank_p90": 23,
+      "old_rank": 17,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        7,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 120,
+        "molecular_weight_da": 13149.3,
+        "theoretical_pI": 7.94,
+        "gravy": -0.501
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=14 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT20-E7E8D",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGSTFTVSSMAWFRQAPGKQREGVATIIPDDFETYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARRVGAAVRYSGYAGANDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GSTFTVSS",
+      "cdr2": "IIPDDFET",
+      "cdr3": "ARRVGAAVRYSGYAGANDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.42105263157894735,
+      "interface_score": 93.30242612685981,
+      "cdr_prior_score": 93.05569621168844,
+      "esm_target_score": 92.58783778575005,
+      "anarcii_score": 29.938432693481445,
+      "developability_score": 96.95135135135135,
+      "composite_score": 93.31415022274467,
+      "rank": 20,
+      "calibrated_prior_score": 48.92,
+      "weight_sensitivity_score_p10": 44.91,
+      "weight_sensitivity_score_p90": 52.94,
+      "weight_sensitivity_rank_p10": 21,
+      "weight_sensitivity_rank_p90": 39,
+      "old_rank": 18,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        19
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 126,
+        "molecular_weight_da": 13570.9,
+        "theoretical_pI": 8.66,
+        "gravy": -0.34
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=19 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT21-3E091",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTYSTLSMAWFRQAPGKQREGVATIKWDFGNTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAEATTAADARGPFYGYAGDDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTYSTLS",
+      "cdr2": "IKWDFGNT",
+      "cdr3": "AEATTAADARGPFYGYAGDDV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.5436507936507936,
+      "interface_score": 98.69149153130434,
+      "cdr_prior_score": 91.57183594281506,
+      "esm_target_score": 95.94086210346435,
+      "anarcii_score": 29.525117874145508,
+      "developability_score": 94.44615384615385,
+      "composite_score": 93.29541291038072,
+      "rank": 21,
+      "calibrated_prior_score": 47.98,
+      "weight_sensitivity_score_p10": 44.94,
+      "weight_sensitivity_score_p90": 50.8,
+      "weight_sensitivity_rank_p10": 24,
+      "weight_sensitivity_rank_p90": 41,
+      "old_rank": 19,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        21
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 128,
+        "molecular_weight_da": 13767.0,
+        "theoretical_pI": 6.39,
+        "gravy": -0.434
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=21 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT22-01EEB",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGFTLTSYTMAWFRQAPGKQREGVATISPDFGITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCADDFSGSYRGGDYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GFTLTSYT",
+      "cdr2": "ISPDFGIT",
+      "cdr3": "ADDFSGSYRGGDY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.5059523809523809,
+      "interface_score": 99.75804293653094,
+      "cdr_prior_score": 93.26402790529741,
+      "esm_target_score": 81.56506304253571,
+      "anarcii_score": 30.151165008544922,
+      "developability_score": 100.0,
+      "composite_score": 93.1523735122088,
+      "rank": 22,
+      "calibrated_prior_score": 65.19,
+      "weight_sensitivity_score_p10": 61.63,
+      "weight_sensitivity_score_p90": 68.7,
+      "weight_sensitivity_rank_p10": 2,
+      "weight_sensitivity_rank_p90": 9,
+      "old_rank": 20,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        13
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 120,
+        "molecular_weight_da": 13031.2,
+        "theoretical_pI": 6.35,
+        "gravy": -0.418
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=13 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT23-90582",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGSTGTSENAMAWFRQAPGKQREGVATIQPIFGAKTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCNRAVSYYRLDRPYYGYPYDDWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GSTGTSENA",
+      "cdr2": "IQPIFGAKT",
+      "cdr3": "NRAVSYYRLDRPYYGYPYDD",
+      "max_positive_identity": 0.6,
+      "max_selected_identity": 0.39999999999999997,
+      "interface_score": 99.88940998729105,
+      "cdr_prior_score": 89.17212922299233,
+      "esm_target_score": 100.0,
+      "anarcii_score": 28.942983627319336,
+      "developability_score": 100.0,
+      "composite_score": 93.12815893865596,
+      "rank": 23,
+      "calibrated_prior_score": 59.82,
+      "weight_sensitivity_score_p10": 55.76,
+      "weight_sensitivity_score_p90": 63.79,
+      "weight_sensitivity_rank_p10": 6,
+      "weight_sensitivity_rank_p90": 17,
+      "old_rank": 21,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        9,
+        20
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 129,
+        "molecular_weight_da": 14227.6,
+        "theoretical_pI": 8.91,
+        "gravy": -0.593
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=20 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT24-E5E1C",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGFTFTEYSMAWFRQAPGKQREGVATISPIQGDTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCRTGPVAVGTYSYADKYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GFTFTEYS",
+      "cdr2": "ISPIQGDT",
+      "cdr3": "RTGPVAVGTYSYADKY",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4666666666666666,
+      "interface_score": 98.73637473034806,
+      "cdr_prior_score": 92.08431963422686,
+      "esm_target_score": 83.10038279453788,
+      "anarcii_score": 30.087501525878906,
+      "developability_score": 100.0,
+      "composite_score": 92.88859583688458,
+      "rank": 24,
+      "calibrated_prior_score": 59.35,
+      "weight_sensitivity_score_p10": 56.33,
+      "weight_sensitivity_score_p90": 62.5,
+      "weight_sensitivity_rank_p10": 6,
+      "weight_sensitivity_rank_p90": 17,
+      "old_rank": 22,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        16
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 123,
+        "molecular_weight_da": 13412.8,
+        "theoretical_pI": 8.6,
+        "gravy": -0.429
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=16 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT25-B560D",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGSTTFYSMAWFRQAPGKQREGVATIDAYGGKTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCADTRRTRPYYNFDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGSTTFYS",
+      "cdr2": "IDAYGGKT",
+      "cdr3": "ADTRRTRPYYNFDV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.49404761904761907,
+      "interface_score": 97.56424070219911,
+      "cdr_prior_score": 88.2760403079492,
+      "esm_target_score": 87.89343919061844,
+      "anarcii_score": 29.97615623474121,
+      "developability_score": 100.0,
+      "composite_score": 92.85088438047607,
+      "rank": 25,
+      "calibrated_prior_score": 49.58,
+      "weight_sensitivity_score_p10": 45.86,
+      "weight_sensitivity_score_p90": 53.32,
+      "weight_sensitivity_rank_p10": 21,
+      "weight_sensitivity_rank_p90": 37,
+      "old_rank": 23,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 121,
+        "molecular_weight_da": 13300.6,
+        "theoretical_pI": 9.2,
+        "gravy": -0.563
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=14 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT26-2477F",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYTFNTYSMAWFRQAPGKQREGVATISPIDAITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARTSFWPRSGAPSYGAYDDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYTFNTYS",
+      "cdr2": "ISPIDAIT",
+      "cdr3": "ARTSFWPRSGAPSYGAYDDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4166666666666667,
+      "interface_score": 95.66310698981849,
+      "cdr_prior_score": 94.92037405183633,
+      "esm_target_score": 91.32976207169922,
+      "anarcii_score": 29.795459747314453,
+      "developability_score": 93.23157894736842,
+      "composite_score": 92.66426786162197,
+      "rank": 26,
+      "calibrated_prior_score": 46.32,
+      "weight_sensitivity_score_p10": 42.17,
+      "weight_sensitivity_score_p90": 50.55,
+      "weight_sensitivity_rank_p10": 26,
+      "weight_sensitivity_rank_p90": 46,
+      "old_rank": 24,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        20
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 127,
+        "molecular_weight_da": 13868.2,
+        "theoretical_pI": 8.62,
+        "gravy": -0.413
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=20 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT27-A31DF",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYSNTESSMAWFRQAPGKQREGVATIDRFFITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARRSTATDVGSVPFGSYYNDYVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYSNTESS",
+      "cdr2": "IDRFFIT",
+      "cdr3": "ARRSTATDVGSVPFGSYYNDYV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.38311688311688313,
+      "interface_score": 95.82006273557239,
+      "cdr_prior_score": 89.8235955393858,
+      "esm_target_score": 100.0,
+      "anarcii_score": 28.997041702270508,
+      "developability_score": 100.0,
+      "composite_score": 92.46927370949811,
+      "rank": 27,
+      "calibrated_prior_score": 47.32,
+      "weight_sensitivity_score_p10": 43.19,
+      "weight_sensitivity_score_p90": 51.69,
+      "weight_sensitivity_rank_p10": 23,
+      "weight_sensitivity_rank_p90": 45,
+      "old_rank": 25,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        22
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 128,
+        "molecular_weight_da": 14064.4,
+        "theoretical_pI": 8.62,
+        "gravy": -0.45
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=22 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT28-6AC8A",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTASSEYGMAWFRQAPGKQREGVATIDATGITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCATDTGVSRRYFYPYLWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTASSEYG",
+      "cdr2": "IDATGIT",
+      "cdr3": "ATDTGVSRRYFYPYL",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4555555555555555,
+      "interface_score": 98.6163745563359,
+      "cdr_prior_score": 89.16350445748911,
+      "esm_target_score": 88.37626564882373,
+      "anarcii_score": 29.584863662719727,
+      "developability_score": 100.0,
+      "composite_score": 91.94707961330415,
+      "rank": 28,
+      "calibrated_prior_score": 48.23,
+      "weight_sensitivity_score_p10": 45.18,
+      "weight_sensitivity_score_p90": 51.31,
+      "weight_sensitivity_rank_p10": 26,
+      "weight_sensitivity_rank_p90": 39,
+      "old_rank": 27,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        7,
+        15
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13210.5,
+        "theoretical_pI": 8.62,
+        "gravy": -0.411
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=15 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT29-A401A",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGKTFTSSYYMGWFRQAPGKEHEGVAHISGIYGETRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCATRKVAVGYSYGGYDDIWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GKTFTSSYY",
+      "cdr2": "ISGIYGET",
+      "cdr3": "ATRKVAVGYSYGGYDDI",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4444444444444444,
+      "interface_score": 96.10269214341238,
+      "cdr_prior_score": 92.4285191699538,
+      "esm_target_score": 79.95553326292384,
+      "anarcii_score": 30.256973266601562,
+      "developability_score": 98.93333333333334,
+      "composite_score": 91.87445809744418,
+      "rank": 29,
+      "calibrated_prior_score": 46.61,
+      "weight_sensitivity_score_p10": 42.57,
+      "weight_sensitivity_score_p90": 51.03,
+      "weight_sensitivity_rank_p10": 27,
+      "weight_sensitivity_rank_p90": 43,
+      "old_rank": 28,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        17
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13525.8,
+        "theoretical_pI": 7.01,
+        "gravy": -0.4
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=17 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT30-9D060",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGGTISVNYYMGWFRQAPGKEHEGVAHIYPGYGETRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCARKGTRPNEGVVGGYSYYDDVWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GGTISVNYY",
+      "cdr2": "IYPGYGET",
+      "cdr3": "ARKGTRPNEGVVGGYSYYDDV",
+      "max_positive_identity": 0.7,
+      "max_selected_identity": 0.3895502645502646,
+      "interface_score": 97.73019446469034,
+      "cdr_prior_score": 93.08817906310708,
+      "esm_target_score": 76.61349844582787,
+      "anarcii_score": 30.20598793029785,
+      "developability_score": 100.0,
+      "composite_score": 91.45092988915263,
+      "rank": 30,
+      "calibrated_prior_score": 48.58,
+      "weight_sensitivity_score_p10": 44.16,
+      "weight_sensitivity_score_p90": 52.91,
+      "weight_sensitivity_rank_p10": 22,
+      "weight_sensitivity_rank_p90": 41,
+      "old_rank": 30,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        21
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 129,
+        "molecular_weight_da": 13974.2,
+        "theoretical_pI": 6.31,
+        "gravy": -0.502
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=21 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT31-35AE0",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGSTTSTSAMGWFRQAPGKEHEGVAHIDLYGDTRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCAHGRAAGIYYGYDYWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GSTTSTSA",
+      "cdr2": "IDLYGDT",
+      "cdr3": "AHGRAAGIYYGYDY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.4761904761904762,
+      "interface_score": 94.62153526677466,
+      "cdr_prior_score": 92.0826183544169,
+      "esm_target_score": 82.39203447017763,
+      "anarcii_score": 30.05069923400879,
+      "developability_score": 99.1483870967742,
+      "composite_score": 91.41260550050363,
+      "rank": 31,
+      "calibrated_prior_score": 47.44,
+      "weight_sensitivity_score_p10": 43.85,
+      "weight_sensitivity_score_p90": 51.45,
+      "weight_sensitivity_rank_p10": 26,
+      "weight_sensitivity_rank_p90": 40,
+      "old_rank": 31,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 120,
+        "molecular_weight_da": 12882.0,
+        "theoretical_pI": 6.04,
+        "gravy": -0.427
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=14 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT32-FDE37",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTRTASYDMAWFRQAPGKQREGVATFITFGITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCVDRAPRVGAPGYYSADDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTRTASYD",
+      "cdr2": "FITFGIT",
+      "cdr3": "VDRAPRVGAPGYYSADDV",
+      "max_positive_identity": 0.5555555555555556,
+      "max_selected_identity": 0.41005291005291006,
+      "interface_score": 96.4157001755517,
+      "cdr_prior_score": 91.53969813059648,
+      "esm_target_score": 91.42240152959626,
+      "anarcii_score": 29.179569244384766,
+      "developability_score": 98.93333333333334,
+      "composite_score": 91.00436784589681,
+      "rank": 32,
+      "calibrated_prior_score": 49.26,
+      "weight_sensitivity_score_p10": 46.12,
+      "weight_sensitivity_score_p90": 52.41,
+      "weight_sensitivity_rank_p10": 22,
+      "weight_sensitivity_rank_p90": 36,
+      "old_rank": 32,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        7,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13516.9,
+        "theoretical_pI": 8.64,
+        "gravy": -0.382
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=18 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT33-47D5F",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTFGSDDMAWFRQAPGKQREGVATISAEGGITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCSRDYASRLYANLWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTFGSDD",
+      "cdr2": "ISAEGGIT",
+      "cdr3": "SRDYASRLYANL",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.44537037037037036,
+      "interface_score": 98.40487931496969,
+      "cdr_prior_score": 90.64401436729712,
+      "esm_target_score": 77.51022638927653,
+      "anarcii_score": 29.998790740966797,
+      "developability_score": 100.0,
+      "composite_score": 90.65552175199,
+      "rank": 33,
+      "calibrated_prior_score": 48.12,
+      "weight_sensitivity_score_p10": 44.87,
+      "weight_sensitivity_score_p90": 51.57,
+      "weight_sensitivity_rank_p10": 25,
+      "weight_sensitivity_rank_p90": 39,
+      "old_rank": 33,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        12
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 119,
+        "molecular_weight_da": 12814.0,
+        "theoretical_pI": 7.96,
+        "gravy": -0.437
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=12 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT34-CEACD",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGKFSEYSMAWFRQAPGKQREGVATISPISGRSTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCSDEPFGYWSSYYNDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGKFSEYS",
+      "cdr2": "ISPISGRST",
+      "cdr3": "SDEPFGYWSSYYNDV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.45601851851851855,
+      "interface_score": 99.47653656985408,
+      "cdr_prior_score": 88.73333399087646,
+      "esm_target_score": 85.94053289472127,
+      "anarcii_score": 29.62371063232422,
+      "developability_score": 95.0,
+      "composite_score": 90.63816085917985,
+      "rank": 34,
+      "calibrated_prior_score": 43.24,
+      "weight_sensitivity_score_p10": 39.76,
+      "weight_sensitivity_score_p90": 46.98,
+      "weight_sensitivity_rank_p10": 35,
+      "weight_sensitivity_rank_p90": 49,
+      "old_rank": 34,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        9,
+        15
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 123,
+        "molecular_weight_da": 13503.7,
+        "theoretical_pI": 7.94,
+        "gravy": -0.538
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=15 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT35-B2494",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYRTIYSMAWFRQAPGKQREGVATIHSYGTTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCADYDRASGVPYGFPNDYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYRTIYS",
+      "cdr2": "IHSYGTT",
+      "cdr3": "ADYDRASGVPYGFPNDY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.413515406162465,
+      "interface_score": 96.95309114870211,
+      "cdr_prior_score": 88.28712387656313,
+      "esm_target_score": 90.24702606108141,
+      "anarcii_score": 29.23672103881836,
+      "developability_score": 100.0,
+      "composite_score": 90.62274154888385,
+      "rank": 35,
+      "calibrated_prior_score": 43.99,
+      "weight_sensitivity_score_p10": 40.59,
+      "weight_sensitivity_score_p90": 47.51,
+      "weight_sensitivity_rank_p10": 35,
+      "weight_sensitivity_rank_p90": 47,
+      "old_rank": 35,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        7,
+        7,
+        17
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13427.7,
+        "theoretical_pI": 8.59,
+        "gravy": -0.531
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=17 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT36-C2392",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGSTFSREDIMAWFRQAPGKQREGVATISRISGSTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCATPGARRWYAGYDDWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GSTFSREDI",
+      "cdr2": "ISRISGST",
+      "cdr3": "ATPGARRWYAGYDD",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.41748366013071897,
+      "interface_score": 98.13978084775182,
+      "cdr_prior_score": 89.60497603322128,
+      "esm_target_score": 83.5374309574753,
+      "anarcii_score": 29.827857971191406,
+      "developability_score": 95.0,
+      "composite_score": 90.55852170350677,
+      "rank": 36,
+      "calibrated_prior_score": 41.76,
+      "weight_sensitivity_score_p10": 38.72,
+      "weight_sensitivity_score_p90": 44.94,
+      "weight_sensitivity_rank_p10": 42,
+      "weight_sensitivity_rank_p90": 49,
+      "old_rank": 36,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13313.6,
+        "theoretical_pI": 9.03,
+        "gravy": -0.526
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=14 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT37-274EC",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTYSEFYMAWFRQAPGKQREGVATIDQEGGTTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCADRTLGIAGHTYSYADFVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTYSEFY",
+      "cdr2": "IDQEGGTT",
+      "cdr3": "ADRTLGIAGHTYSYADFV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.4351851851851852,
+      "interface_score": 98.61562202226041,
+      "cdr_prior_score": 90.84089709405461,
+      "esm_target_score": 82.56503675218133,
+      "anarcii_score": 29.741483688354492,
+      "developability_score": 96.0,
+      "composite_score": 90.48256832906088,
+      "rank": 37,
+      "calibrated_prior_score": 43.8,
+      "weight_sensitivity_score_p10": 41.78,
+      "weight_sensitivity_score_p90": 45.92,
+      "weight_sensitivity_rank_p10": 39,
+      "weight_sensitivity_rank_p90": 45,
+      "old_rank": 37,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13583.8,
+        "theoretical_pI": 5.73,
+        "gravy": -0.436
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=18 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT38-01A3B",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYSFTSLEMAWFRQAPGKQREGVATEIPIFGETYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCARRGYTVSTGYYGADKYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYSFTSLE",
+      "cdr2": "EIPIFGET",
+      "cdr3": "ARRGYTVSTGYYGADKY",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.43246187363834426,
+      "interface_score": 100.0,
+      "cdr_prior_score": 92.02523207262678,
+      "esm_target_score": 81.70541795956662,
+      "anarcii_score": 29.456905364990234,
+      "developability_score": 100.0,
+      "composite_score": 90.45184311482492,
+      "rank": 38,
+      "calibrated_prior_score": 56.71,
+      "weight_sensitivity_score_p10": 52.86,
+      "weight_sensitivity_score_p90": 60.41,
+      "weight_sensitivity_rank_p10": 10,
+      "weight_sensitivity_rank_p90": 21,
+      "old_rank": 38,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        17
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 124,
+        "molecular_weight_da": 13620.0,
+        "theoretical_pI": 8.58,
+        "gravy": -0.46
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=17 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT39-E5F14",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASPYTFESDAMAWFRQAPGKEREAVAGIISDKGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAGDTVSYRGYGYGDNDWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "PYTFESDA",
+      "cdr2": "IISDKGT",
+      "cdr3": "AGDTVSYRGYGYGDND",
+      "max_positive_identity": 0.5555555555555556,
+      "max_selected_identity": 0.5106516290726817,
+      "interface_score": 98.77820887128843,
+      "cdr_prior_score": 90.16302776116648,
+      "esm_target_score": 90.47754338984862,
+      "anarcii_score": 29.026273727416992,
+      "developability_score": 96.0,
+      "composite_score": 89.9624564051083,
+      "rank": 39,
+      "calibrated_prior_score": 48.68,
+      "weight_sensitivity_score_p10": 45.26,
+      "weight_sensitivity_score_p90": 52.09,
+      "weight_sensitivity_rank_p10": 23,
+      "weight_sensitivity_rank_p90": 39,
+      "old_rank": 39,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        16
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13043.1,
+        "theoretical_pI": 4.78,
+        "gravy": -0.398
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=16 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT40-1A354",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTYTSYSMAWFRQAPGKQREGVATFDEIGGITYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCDRADKPFQSTYRYFVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTYTSYS",
+      "cdr2": "FDEIGGIT",
+      "cdr3": "DRADKPFQSTYRYFV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.46388888888888885,
+      "interface_score": 100.0,
+      "cdr_prior_score": 87.07700509128753,
+      "esm_target_score": 80.31918846149456,
+      "anarcii_score": 29.60870361328125,
+      "developability_score": 100.0,
+      "composite_score": 89.73601741147307,
+      "rank": 40,
+      "calibrated_prior_score": 49.12,
+      "weight_sensitivity_score_p10": 44.54,
+      "weight_sensitivity_score_p90": 53.99,
+      "weight_sensitivity_rank_p10": 20,
+      "weight_sensitivity_rank_p90": 40,
+      "old_rank": 40,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        15
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 3
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13462.8,
+        "theoretical_pI": 8.6,
+        "gravy": -0.506
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=15 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT41-00704",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTFNTLPMAWFRQAPGKQREGVATIDYTYGETYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCATPRFLGSSYADYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTFNTLP",
+      "cdr2": "IDYTYGET",
+      "cdr3": "ATPRFLGSSYADY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.397875816993464,
+      "interface_score": 96.25408825562654,
+      "cdr_prior_score": 90.67504236823345,
+      "esm_target_score": 77.24087063152058,
+      "anarcii_score": 29.852718353271484,
+      "developability_score": 100.0,
+      "composite_score": 89.52773436459557,
+      "rank": 41,
+      "calibrated_prior_score": 42.95,
+      "weight_sensitivity_score_p10": 39.47,
+      "weight_sensitivity_score_p90": 46.76,
+      "weight_sensitivity_rank_p10": 37,
+      "weight_sensitivity_rank_p90": 47,
+      "old_rank": 41,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        13
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 120,
+        "molecular_weight_da": 13098.4,
+        "theoretical_pI": 7.94,
+        "gravy": -0.445
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=13 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT42-3F06E",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGYTLSSLAMAWFRQAPGKQREGVATIIYSGNTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAVGGDRPPYDADYWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GYTLSSLA",
+      "cdr2": "IIYSGNT",
+      "cdr3": "AVGGDRPPYDADY",
+      "max_positive_identity": 0.7142857142857143,
+      "max_selected_identity": 0.43389724310776945,
+      "interface_score": 93.8424138947523,
+      "cdr_prior_score": 95.65564237849956,
+      "esm_target_score": 79.64835057978887,
+      "anarcii_score": 29.694997787475586,
+      "developability_score": 97.6,
+      "composite_score": 89.50257040858226,
+      "rank": 42,
+      "calibrated_prior_score": 38.74,
+      "weight_sensitivity_score_p10": 33.92,
+      "weight_sensitivity_score_p90": 43.8,
+      "weight_sensitivity_rank_p10": 44,
+      "weight_sensitivity_rank_p90": 50,
+      "old_rank": 42,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        13
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 119,
+        "molecular_weight_da": 12857.1,
+        "theoretical_pI": 7.94,
+        "gravy": -0.397
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=13 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT43-00588",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTSSPSYMAWFRQAPGKQREGVATIDYYRRTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAPGDYDVWGQGTQVTVSS",
+      "framework": "F3",
+      "cdr1": "GGTSSPSY",
+      "cdr2": "IDYYRRT",
+      "cdr3": "APGDYDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4047619047619047,
+      "interface_score": 100.0,
+      "cdr_prior_score": 90.48501392764958,
+      "esm_target_score": 86.34278347182236,
+      "anarcii_score": 28.77989387512207,
+      "developability_score": 100.0,
+      "composite_score": 88.96212106919953,
+      "rank": 43,
+      "calibrated_prior_score": 48.18,
+      "weight_sensitivity_score_p10": 44.34,
+      "weight_sensitivity_score_p90": 51.84,
+      "weight_sensitivity_rank_p10": 23,
+      "weight_sensitivity_rank_p90": 43,
+      "old_rank": 43,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "38",
+        "name": "SHR-2002 VHH-38",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASPSTYGPSDMAWFRQAPGKQREGVATISAAGRLTYYTDSVRGRFTISRDNAKNTMYLQMNSLKPEDTAMYYCAADFAGGSSLFADYKYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        7
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 4,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 113,
+        "molecular_weight_da": 12360.5,
+        "theoretical_pI": 8.62,
+        "gravy": -0.562
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F3/SHR-2002 VHH-38；H3=7 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT44-F9BAC",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGGISPYSMGWFRQAPGKEHEGVAHIDVSTETRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCASTVRRVAGYPYGYYGDDVWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GGISPYS",
+      "cdr2": "IDVSTET",
+      "cdr3": "ASTVRRVAGYPYGYYGDDV",
+      "max_positive_identity": 0.5714285714285714,
+      "max_selected_identity": 0.35728209412419937,
+      "interface_score": 99.01852156618811,
+      "cdr_prior_score": 92.1840682527506,
+      "esm_target_score": 71.21069360792892,
+      "anarcii_score": 29.725664138793945,
+      "developability_score": 100.0,
+      "composite_score": 88.30314635298329,
+      "rank": 44,
+      "calibrated_prior_score": 51.73,
+      "weight_sensitivity_score_p10": 47.8,
+      "weight_sensitivity_score_p90": 55.51,
+      "weight_sensitivity_rank_p10": 17,
+      "weight_sensitivity_rank_p90": 33,
+      "old_rank": 44,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        7,
+        7,
+        19
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 124,
+        "molecular_weight_da": 13351.5,
+        "theoretical_pI": 5.85,
+        "gravy": -0.402
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=19 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT45-6289E",
+      "sequence": "QVQLVESGGGSVQAGGSLRLSCAASGGTIGRTYSMGWFRQAPGKEREGVAHIISDADTRYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCADTDYAGYRPGAYDFDKYWGQGTQVTVSS",
+      "framework": "F4",
+      "cdr1": "GGTIGRTYS",
+      "cdr2": "IISDADT",
+      "cdr3": "ADTDYAGYRPGAYDFDKY",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.39153439153439157,
+      "interface_score": 99.81899294367955,
+      "cdr_prior_score": 91.32096351883956,
+      "esm_target_score": 68.00263854605394,
+      "anarcii_score": 29.87116241455078,
+      "developability_score": 100.0,
+      "composite_score": 87.98127887086024,
+      "rank": 45,
+      "calibrated_prior_score": 50.57,
+      "weight_sensitivity_score_p10": 46.39,
+      "weight_sensitivity_score_p90": 54.83,
+      "weight_sensitivity_rank_p10": 18,
+      "weight_sensitivity_rank_p90": 36,
+      "old_rank": 45,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "39",
+        "name": "SHR-2002 VHH-39",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "QVQLVESGGGSVQAGGSLRLSCAASRYTSRTDCMGWFRQAPGKEREGVAHIDSDGIPRYVESVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFGDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        9,
+        7,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 1,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 125,
+        "molecular_weight_da": 13549.7,
+        "theoretical_pI": 6.1,
+        "gravy": -0.543
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F4/SHR-2002 VHH-39；H3=18 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT46-9B50E",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASGYPFTSSAMAWFRQAPGKEREAVAGIDNDFGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCARRTAGVYSWPSAYYDDVWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "GYPFTSSA",
+      "cdr2": "IDNDFGT",
+      "cdr3": "ARRTAGVYSWPSAYYDDV",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.46146616541353386,
+      "interface_score": 97.7327748659754,
+      "cdr_prior_score": 94.22969208205163,
+      "esm_target_score": 85.39552585520921,
+      "anarcii_score": 28.83440589904785,
+      "developability_score": 92.6,
+      "composite_score": 87.69697478254773,
+      "rank": 46,
+      "calibrated_prior_score": 43.96,
+      "weight_sensitivity_score_p10": 39.69,
+      "weight_sensitivity_score_p90": 48.23,
+      "weight_sensitivity_rank_p10": 32,
+      "weight_sensitivity_rank_p90": 48,
+      "old_rank": 46,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        7,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 124,
+        "molecular_weight_da": 13358.6,
+        "theoretical_pI": 5.2,
+        "gravy": -0.31
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=18 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT47-6B247",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASSDTFTSFSMAWFRQAPGKEREAVAGISPYGGETTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCARPYIGGDRYYGDVWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "SDTFTSFS",
+      "cdr2": "ISPYGGET",
+      "cdr3": "ARPYIGGDRYYGDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4702380952380952,
+      "interface_score": 100.0,
+      "cdr_prior_score": 92.21718835510423,
+      "esm_target_score": 67.19338187692605,
+      "anarcii_score": 29.790773391723633,
+      "developability_score": 100.0,
+      "composite_score": 87.66129702710784,
+      "rank": 47,
+      "calibrated_prior_score": 55.21,
+      "weight_sensitivity_score_p10": 50.17,
+      "weight_sensitivity_score_p90": 60.13,
+      "weight_sensitivity_rank_p10": 9,
+      "weight_sensitivity_rank_p90": 26,
+      "old_rank": 47,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 121,
+        "molecular_weight_da": 12987.2,
+        "theoretical_pI": 5.23,
+        "gravy": -0.331
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=14 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT48-9F7BB",
+      "sequence": "DVQLVESGGGSVQAGGSLRLSCVASGGSYGSYAMGWFRQAPGKEHEGVAHIYPIFGNTRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCKDEDATGPGNAYFDIWGQGTQVTVSS",
+      "framework": "F1",
+      "cdr1": "GGSYGSYA",
+      "cdr2": "IYPIFGNT",
+      "cdr3": "KDEDATGPGNAYFDI",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.4106753812636166,
+      "interface_score": 95.68097604294677,
+      "cdr_prior_score": 91.05265896825695,
+      "esm_target_score": 66.7383128153228,
+      "anarcii_score": 29.999189376831055,
+      "developability_score": 100.0,
+      "composite_score": 87.06068368130695,
+      "rank": 48,
+      "calibrated_prior_score": 40.19,
+      "weight_sensitivity_score_p10": 35.64,
+      "weight_sensitivity_score_p90": 45.11,
+      "weight_sensitivity_rank_p10": 42,
+      "weight_sensitivity_rank_p90": 49,
+      "old_rank": 48,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "20",
+        "name": "SHR-2002 VHH-20",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "DVQLVESGGGSVQAGGSLRLSCVASRYTSRTDCMGWFRQAPGKEHEGVAHIDSDGIPRYVDSVKGRFTISQDHAKNTLYLQMNSLKPEDSATYYCVVGFKFDDDYCAPNDWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        15
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 1,
+        "Asp热点": 2,
+        "氧化性Met": 2,
+        "游离Cys": 2,
+        "连续疏水": 0
+      },
+      "full_sequence_metrics": {
+        "length": 122,
+        "molecular_weight_da": 13096.2,
+        "theoretical_pI": 5.46,
+        "gravy": -0.439
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F1/SHR-2002 VHH-20；H3=15 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT49-082BE",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASGYSYSELSMAWFRQAPGKEREAVAGIDQITGETTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCATGAASRNYGYGDYWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "GYSYSELS",
+      "cdr2": "IDQITGET",
+      "cdr3": "ATGAASRNYGYGDY",
+      "max_positive_identity": 0.625,
+      "max_selected_identity": 0.41269841269841273,
+      "interface_score": 94.3002879578183,
+      "cdr_prior_score": 91.3477971117188,
+      "esm_target_score": 72.72062441247648,
+      "anarcii_score": 29.543169021606445,
+      "developability_score": 100.0,
+      "composite_score": 86.76617211048259,
+      "rank": 49,
+      "calibrated_prior_score": 38.46,
+      "weight_sensitivity_score_p10": 34.26,
+      "weight_sensitivity_score_p90": 42.9,
+      "weight_sensitivity_rank_p10": 46,
+      "weight_sensitivity_rank_p90": 50,
+      "old_rank": 49,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        8,
+        8,
+        14
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 121,
+        "molecular_weight_da": 12918.0,
+        "theoretical_pI": 4.97,
+        "gravy": -0.355
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=14 aa；单体先验顺序"
+    },
+    {
+      "name": "PVRIG-OPT50-CD0A1",
+      "sequence": "HVQLVESGGGSVQAGGSLRLSCVASGYRTSLSMAWFRQAPGKEREAVAGIIPEIGETTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCTRADNYVYSGNYGYANDVWGQGTQVTVSS",
+      "framework": "F5",
+      "cdr1": "GYRTSLS",
+      "cdr2": "IIPEIGET",
+      "cdr3": "TRADNYVYSGNYGYANDV",
+      "max_positive_identity": 0.6666666666666666,
+      "max_selected_identity": 0.43716931216931226,
+      "interface_score": 96.94095286694885,
+      "cdr_prior_score": 93.67862669825892,
+      "esm_target_score": 79.22038319567869,
+      "anarcii_score": 28.641632080078125,
+      "developability_score": 100.0,
+      "composite_score": 86.2957334616463,
+      "rank": 50,
+      "calibrated_prior_score": 43.93,
+      "weight_sensitivity_score_p10": 39.37,
+      "weight_sensitivity_score_p90": 48.39,
+      "weight_sensitivity_rank_p10": 33,
+      "weight_sensitivity_rank_p90": 47,
+      "old_rank": 50,
+      "design_type": "优化改造",
+      "parent": {
+        "id": "151",
+        "name": "SHR-2002 VHH-151",
+        "source": "WO2021180205A1 / 恒瑞 / SHR-2002",
+        "sequence": "HVQLVESGGGSVQAGGSLRLSCVASASGFTYRPYCMAWFRQAPGKEREAVAGIDIFGGTTYADSVKGRFTASRDNAGFSLFLQMNDLKPEDTAMYYCAAGDSPDGRCPPLGQGLNYWGQGTQVTVSS",
+        "antibody_type": "VHH"
+      },
+      "cdr_lengths": [
+        7,
+        8,
+        18
+      ],
+      "cdr_risk_motifs": {
+        "N糖基化": 0,
+        "脱酰胺/异构化": 0,
+        "连续疏水": 0,
+        "三连重复": 0
+      },
+      "full_sequence_risk_motifs": {
+        "N糖基化": 0,
+        "Asn热点": 0,
+        "Asp热点": 1,
+        "氧化性Met": 3,
+        "游离Cys": 2,
+        "连续疏水": 2
+      },
+      "full_sequence_metrics": {
+        "length": 124,
+        "molecular_weight_da": 13367.6,
+        "theoretical_pI": 5.26,
+        "gravy": -0.325
+      },
+      "evidence_level": "B：序列/接触组成先验；未进行候选-PVRIG复合物几何判别，须以表达和阻断实验确认",
+      "portfolio_reason": "F5/SHR-2002 VHH-151；H3=18 aa；单体先验顺序"
+    }
+  ]
+}

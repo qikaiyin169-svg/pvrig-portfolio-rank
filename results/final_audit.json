@@ -1,0 +1,51 @@
+{
+  "candidate_count": 50,
+  "rank_contiguous": true,
+  "unique_names": 50,
+  "unique_sequences": 50,
+  "design_type_values": [
+    "优化改造"
+  ],
+  "parent_framework_mapping": {
+    "F1": "20",
+    "F2": "30",
+    "F3": "38",
+    "F4": "39",
+    "F5": "151"
+  },
+  "top10_old_ranks": [
+    1,
+    2,
+    3,
+    6,
+    8,
+    10,
+    11,
+    14,
+    26,
+    29
+  ],
+  "top10_framework_counts": {
+    "F1": 2,
+    "F3": 4,
+    "F4": 2,
+    "F5": 2
+  },
+  "top10_h3_lengths": [
+    13,
+    14,
+    15,
+    20,
+    14,
+    14,
+    18,
+    18,
+    17,
+    17
+  ],
+  "top10_long_h3_count": 1,
+  "max_positive_cdr_identity": 0.7142857142857143,
+  "all_cdr_risk_motif_counts_zero": true,
+  "full_sequence_risk_motifs_are_disclosed": true,
+  "claim_scope": "校准分及权重敏感性区间只用于序列先验排序；不代表Kd、IC50、阻断率、实验成功概率或候选-PVRIG复合物几何可信度。"
+}

@@ -1,0 +1,19 @@
+{
+  "validator": "organizer ab-data-validator validation.Validator",
+  "numbering_adapter": "ANARCII 2.0.8, IMGT",
+  "alignment_adapter": "Bio.Align PairwiseAligner global; match=2, mismatch=-1, gap=-1",
+  "identity_threshold": 0.75,
+  "candidate_count": 50,
+  "positive_reference_count": 48,
+  "failure_count": 0,
+  "passed_count": 50,
+  "progress": [
+    "Numbering positive references",
+    "Numbered 48 positive references",
+    "Numbering candidate antibodies",
+    "Numbered 50 candidate antibodies",
+    "Comparing candidate CDRs to positive references",
+    "Completed CDR identity comparisons"
+  ],
+  "failures": []
+}
