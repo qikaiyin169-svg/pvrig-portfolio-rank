@@ -9,14 +9,3 @@ authors:
     given-names: Qikai
 license: MIT
 repository-code: "https://github.com/qikaiyin169-svg/pvrig-portfolio-rank"
-cff-version: 1.2.0
-message: "If you use this reproducibility package, please cite this repository."
-title: "PVRIG-PortfolioRank: reproducible VHH CDR generation and portfolio screening"
-type: software
-version: 2.0.0
-date-released: 2026-07-26
-authors:
-  - family-names: Yin
-    given-names: Qikai
-license: MIT
-repository-code: "https://github.com/OWNER/pvrig-portfolio-rank"
